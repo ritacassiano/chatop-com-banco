@@ -1,11 +1,10 @@
-import json
-import sqlite3
-
-import pandas as pd
-import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
+import json
+import sqlite3
+import pandas as pd
+import streamlit as st
 
 
 # =========================================================
@@ -258,6 +257,7 @@ if not st.session_state.autenticado:
                 st.error("CPF não cadastrado. Cadastre este cliente primeiro.")
 
 else:
+    #BARRA LATERAL
     with st.sidebar:
         cliente = st.session_state.cliente
         st.header("📊 Monitor de Machine Learning")
